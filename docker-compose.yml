@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+
+    postgres_db:
+        image: postgres:13.0-alpine
+        container_name: polygon_bdd
+        restart: always
+        ports:
+            - '5433:5432'
+        environment:
+            POSTGRES_DB: polygon
+            POSTGRES_USER: 'mozio'
+            POSTGRES_PASSWORD: 'polygon@123'
+       
+        # volumes:
+        #       - postgres_data:/var/lib/postgresql/data/
+
+    backend:
+        restart: always
+        build:
+            context: .
+            dockerfile: ./docker/Dockerfile
+        entrypoint: /app/docker/wsgi-entrypoint.sh
+        volumes:
+            - ./polygons:/app/backend/
+
+        ports:
+            - 8004:8004
+ 
+        depends_on: 
+            - postgres_db   
+
+# volumes:
+    # postgres_data:
+
