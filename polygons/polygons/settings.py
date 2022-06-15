@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rx%pte7e=v^@^0sfof7f0w%*13l_+smlx5nsd(oxd7t2730aix
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1','https://polygonmozio.herokuapp.com/']
 
 
 # Application definition
