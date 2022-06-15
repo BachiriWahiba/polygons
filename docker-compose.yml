@@ -12,9 +12,10 @@ services:
             POSTGRES_DB: polygon
             POSTGRES_USER: 'mozio'
             POSTGRES_PASSWORD: 'polygon@123'
-       
+        
         # volumes:
-        #       - postgres_data:/var/lib/postgresql/data/
+            # - postgres_data:/var/lib/postgresql/data/
+       
 
     backend:
         restart: always
@@ -30,7 +31,21 @@ services:
  
         depends_on: 
             - postgres_db   
+    
+    nginx:
+        build:
+            context: .
+            dockerfile: ./docker/nginx/Dockerfile
+        volumes:
+            - ./docker/nginx/conf.d:/etc/nginx/conf.d
+            - ./polygons/static:/home/app/backend/static
+         
+        ports:
+            - 1337:80
+        depends_on:
+            - backend
 
-# volumes:
-    # postgres_data:
+volumes: {}
+    #     # postgres_data:
+    # staticfile_volume:
 

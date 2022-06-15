@@ -17,15 +17,21 @@ do
     sleep 2
 done
 
+# until python manage.py test
+# do
+#     echo "Waiting for db to be ready..."
+#     sleep 2
+# done
 #until python manage.py loaddata fixtures/db1.json
 #do
 #    echo "Waiting for db to be ready2..."
 #    sleep 2
 #done
 
-./manage.py collectstatic --noinput
+python manage.py collectstatic --noinput
 
 gunicorn polygons.wsgi --bind 0.0.0.0:8004 
+# python manage.py runserver 0.0.0.0:8004
 
 
 #####################################################################################

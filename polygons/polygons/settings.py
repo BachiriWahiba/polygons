@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-rx%pte7e=v^@^0sfof7f0w%*13l_+smlx5nsd(oxd7t2730aix
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,9 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_swagger',
-    'languages',
     'polygon',
-
+    'drf_yasg',
 
 ]
 
@@ -56,6 +55,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'polygons.urls'
+STATIC_URL = '/static/'
+STATIC_ROOT  = os.path.join(BASE_DIR, 'static')
 
 TEMPLATES = [
     {
