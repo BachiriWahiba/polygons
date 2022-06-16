@@ -23,6 +23,7 @@ do
     sleep 2
 done
 
+
 # Dumpdata
 # python manage.py loaddata dumpdata/serviceArea.json
 # python manage.py loaddata dumpdata/provider.json

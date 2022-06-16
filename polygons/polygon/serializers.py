@@ -15,5 +15,5 @@ class ServiceAreaSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = ServiceArea
-        fields = '__all__'
+        fields = '__all__'  
         read_only_fields = ('id','created_at','modified_at')
