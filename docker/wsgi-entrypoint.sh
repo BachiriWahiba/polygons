@@ -24,8 +24,8 @@ do
 done
 
 # Dumpdata
-# python manage.py loaddata dumpdata/serviceArea.json
-# python manage.py loaddata dumpdata/provider.json
+python manage.py loaddata dumpdata/serviceArea.json
+python manage.py loaddata dumpdata/provider.json
 python manage.py collectstatic --noinput
 
 gunicorn polygons.wsgi --bind 0.0.0.0:8004 --workers 1 --threads 1
