@@ -80,7 +80,7 @@ class ServiceAreaTest(TestCase):
     #     # get API response
     #     response = client.post(self.REVERSE_SERVICEAREA,
     #     {
-    #         "service_area_name":"MLO, KS, USA",
+    #         "service_area_name":"MPMO, KLS, USA",
     #         "price":30,
     #         "provider":2,
     #         "geoinformation":{
@@ -103,8 +103,8 @@ class EntrypointPolygonTest(TestCase):
         # get API response
         response = client.get(reverse_endpoint_polygon)
         # get data from db
-        providers = ServiceArea.objects.filter(geoinformation__latitude__lte=latitude,geoinformation__latitude__gt=longitude,geoinformation__longitude__gte=longitude,geoinformation__longitude__lt=latitude)
-        serializer = ProviderSerializer(providers, many=True)
+        polygons = ServiceArea.objects.filter(geoinformation__latitude__lte=latitude,geoinformation__latitude__gt=longitude,geoinformation__longitude__gte=longitude,geoinformation__longitude__lt=latitude)
+        serializer = ServiceAreaSerializer(polygons, many=True)
         self.assertEqual(response.data, serializer.data)
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 

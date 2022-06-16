@@ -21,8 +21,8 @@ services:
         restart: always
         build:
             context: .
-            dockerfile: ./docker/Dockerfile
-        entrypoint: /app/docker/wsgi-entrypoint.sh
+            dockerfile: ./docker/backend/Dockerfile
+        entrypoint: /app/docker/backend/wsgi-entrypoint.sh
         volumes:
             - ./polygons:/app/backend/
 

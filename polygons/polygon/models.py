@@ -50,6 +50,7 @@ class Provider(GeneralFields):
 class ServiceArea(GeneralFields):
 
     """ Service Area model  """  
+    
     service_area_name = models.CharField(max_length=50, unique=True ,blank=False , null=False ,verbose_name="service area name")
     price = models.DecimalField(max_digits=10 , decimal_places=2 ,null=True, blank=True , verbose_name="Price")
     provider = models.ForeignKey(Provider , null=True , related_name="service_provider" ,on_delete=CASCADE , verbose_name="provider foreign key")

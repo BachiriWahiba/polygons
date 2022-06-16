@@ -92,7 +92,7 @@ DATABASES = {
         'HOST': 'postgres_db',
         'PORT': '5432',
         'TEST': {
-            'NAME': 'test_polygons',
+            'NAME': 'polygons_api_tests',
         },
     }
 }
