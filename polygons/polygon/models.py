@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import RegexValidator
 from django.db.models.deletion import CASCADE
-# from polygons.custom_fields import languageField , currencyField
+
 
 # Create your models here.
 
@@ -57,3 +57,6 @@ class ServiceArea(GeneralFields):
     
     def __str__(self):
         return self.service_area_name
+
+
+

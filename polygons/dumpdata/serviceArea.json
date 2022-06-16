@@ -1,0 +1,55 @@
+[
+    {
+        "pk": "1",
+        "model": "polygon.ServiceArea",
+        "fields": {
+            "service_area_name":"Emporia, KS, USA",
+            "price":50,
+            "provider":2,
+            "geoinformation":{
+                "latitude":38.405903,
+                "longitude":-96.188339
+            }
+        }
+    },
+    {
+        "pk": "2",
+        "model": "polygon.ServiceArea",
+        "fields": {
+            "service_area_name":"Dodge City, KS, USA",
+            "price":40,
+            "provider":3,
+            "geoinformation":{
+                "latitude":37.753098,
+                "longitude":-100.024872
+            }
+        }
+    },
+    {
+        "pk": "3",
+        "model": "polygon.ServiceArea",
+        "fields": {
+            "service_area_name":"Council Grove, KS, USA",
+            "price":60,
+            "provider":4,
+            "geoinformation":{
+                "latitude":38.661697,
+                "longitude":-96.492599
+            }
+        }
+    },
+    {
+        "pk": "4",
+        "model": "polygon.ServiceArea",
+        "fields": {
+            "service_area_name":"Atchison, KS, USA",
+            "price":50,
+            "provider":5,
+            "geoinformation":{
+                "latitude":39.563606,
+                "longitude":-95.125549
+            }
+        }
+    }
+
+] 

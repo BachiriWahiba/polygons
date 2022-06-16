@@ -1,0 +1,47 @@
+[
+    {
+        "pk": "2",
+        "model": "polygon.Provider",
+        "fields": {
+            "provider_name":"TrainTL" ,
+            "email":"TrainTL@str.sp" ,
+            "phone_number":"+3312457875", 
+            "language":"spanish" ,
+            "currency":"EUR"
+        }
+    },
+    {
+        "pk": "3",
+        "model": "polygon.Provider",
+        "fields": {
+            "provider_name":"Comercio" ,
+            "email":"comercio@str.en" ,
+            "phone_number":"+3312457896", 
+            "language":"english" ,
+            "currency":"USD"
+        }
+    },
+    {
+        "pk": "4",
+        "model": "polygon.Provider",
+        "fields": {
+        "provider_name":"MetroM" ,
+        "email":"MetroM@str.ar" ,
+        "phone_number":"+3312457892", 
+        "language":"arabic" ,
+        "currency":"EUR"
+        }
+    },
+    {   
+        "pk": "5",
+        "model": "polygon.Provider",
+        "fields": {
+            "provider_name":"maystroDeliv" ,
+            "email":"MetroM@str.ar" ,
+            "phone_number":"+3312457891", 
+            "language":"English" ,
+            "currency":"EUR"
+        }
+    }
+
+] 
